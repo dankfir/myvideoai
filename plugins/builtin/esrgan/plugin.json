@@ -1,0 +1,19 @@
+{
+  "id": "builtin.esrgan",
+  "name": "Real-ESRGAN (built-in)",
+  "version": "1.0.0",
+  "kind": "model",
+  "description": "Built-in Real-ESRGAN upscaler, exposed through the same ModelPlugin hook as third-party models.",
+  "author": "myvideoai",
+  "license": "Apache-2.0",
+  "entry": "esrgan.py::ESRGANModelPlugin",
+  "enabled": false,
+  "order": 10,
+  "provides": "upscale",
+  "backends": ["cuda", "cpu"],
+  "params": {
+    "upscale_model": "x4plus",
+    "tile": 0,
+    "auto_tile": true
+  }
+}

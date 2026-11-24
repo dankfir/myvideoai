@@ -1,0 +1,16 @@
+{
+  "id": "examples.unsharp",
+  "name": "Unsharp Mask (example frame plugin)",
+  "version": "1.0.0",
+  "kind": "frame",
+  "description": "Third-party example: classic unsharp masking. Demonstrates the frame hook with zero glue code.",
+  "author": "myvideoai example",
+  "license": "MIT",
+  "entry": "unsharp.py::UnsharpPlugin",
+  "enabled": false,
+  "order": 500,
+  "params": {
+    "amount": 0.6,
+    "radius": 1.2
+  }
+}

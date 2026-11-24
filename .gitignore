@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------------------
+# myvideoai — ignore rules
+#
+# Rule of thumb: commit code, docs, plugin manifests and (small) self-made
+# sample media. Never commit model weights, generated videos, caches or
+# anything that leaks a local machine layout.
+# ---------------------------------------------------------------------------
+
+# --- model weights (auto-downloaded on first run, hundreds of MB) -----------
+myvideoai/models/weights/
+models/weights/
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+*.param
+
+# --- generated output -------------------------------------------------------
+myvideoai/output/
+output/
+!output/.gitkeep
+
+# --- user plugin drop-in directory -----------------------------------------
+myvideoai/models/plugins/
+models/plugins/
+
+# --- python bytecode / caches ----------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- virtualenvs / build artifacts ------------------------------------------
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- local scratch ---------------------------------------------------------
+_local_ref/
+*.log
+*.tmp
+*.part
+# Windows reserved device names that can appear as stray filesystem entries
+CON

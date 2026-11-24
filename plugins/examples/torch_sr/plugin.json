@@ -1,0 +1,21 @@
+{
+  "id": "examples.torch_sr",
+  "name": "PyTorch SR model adapter (example)",
+  "version": "1.0.0",
+  "kind": "model",
+  "description": "Example showing ModelPlugin is backend-agnostic: wrap any torch SR .pth with the same protocol as ONNX. Copy + edit entry/model_url/native_scale for a new architecture.",
+  "author": "myvideoai",
+  "license": "MIT",
+  "entry": "torch_sr.py::TorchSRPlugin",
+  "enabled": false,
+  "order": 60,
+  "provides": "upscale",
+  "backends": ["cuda", "cpu"],
+  "params": {
+    "model_file": "RealESRGAN_x4plus.pth",
+    "model_url": "",
+    "native_scale": 4,
+    "tile": 256,
+    "arch": "rrdbnet"
+  }
+}

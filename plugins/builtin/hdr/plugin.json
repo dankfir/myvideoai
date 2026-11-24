@@ -1,0 +1,16 @@
+{
+  "id": "builtin.hdr",
+  "name": "SDR to HDR10",
+  "version": "1.0.0",
+  "kind": "video",
+  "description": "Inverse tone mapping to Rec.2020 PQ HDR10 (10-bit) via libplacebo.",
+  "author": "myvideoai",
+  "license": "MIT",
+  "entry": "hdr.py::HDRPlugin",
+  "order": 200,
+  "params": {
+    "tonemapping_param": 0.0,
+    "gamut_mode": 0,
+    "crf": 18
+  }
+}

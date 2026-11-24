@@ -1,0 +1,24 @@
+{
+  "id": "builtin.onnx_superres",
+  "name": "ONNX Super-Resolution (drop-in)",
+  "version": "1.0.0",
+  "kind": "model",
+  "description": "Generic ONNX super-resolution model. Drop in any NCHW-RGB SR model by overriding params in a copy of this folder — zero code changes.",
+  "author": "myvideoai",
+  "license": "MIT",
+  "entry": "onnx_superres.py::ONNXSuperResPlugin",
+  "enabled": false,
+  "order": 50,
+  "provides": "upscale",
+  "backends": ["cuda", "directml", "cpu"],
+  "params": {
+    "model_file": "model.onnx",
+    "model_url": "",
+    "input_name": "",
+    "output_name": "",
+    "native_scale": 4,
+    "tile": 256,
+    "norm": "0to1",
+    "layout": "nchw"
+  }
+}

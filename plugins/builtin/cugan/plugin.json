@@ -1,0 +1,17 @@
+{
+  "id": "builtin.cugan",
+  "name": "Real-CUGAN (built-in)",
+  "version": "1.0.0",
+  "kind": "model",
+  "description": "Built-in Real-CUGAN 4x upscaler for anime content, exposed through the ModelPlugin hook.",
+  "author": "myvideoai",
+  "license": "Apache-2.0",
+  "entry": "cugan.py::CUGANModelPlugin",
+  "enabled": false,
+  "order": 10,
+  "provides": "upscale",
+  "backends": ["cuda", "cpu"],
+  "params": {
+    "tile_mode": 0
+  }
+}
